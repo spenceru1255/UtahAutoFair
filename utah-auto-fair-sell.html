@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sell Your Car at Utah Auto Fair — Coming 2026</title>
+<meta name="description" content="Get $2,000–$4,000 more than a dealer trade-in. Show your car to hundreds of Utah buyers in one weekend. No commissions. No hassle. Only $99."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #1a1a2e;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── TOKENS ── */
+:root {
+  --rust:    #c0441f;
+  --rust-dk: #9e3415;
+  --rust-lt: #e05a2b;
+  --sand:    #f5f0e8;
+  --sand-dk: #ede5d4;
+  --navy:    #1a2d4a;
+  --navy-dk: #0f1d30;
+  --sky:     #4a8ab5;
+  --off:     #f7f5f2;
+  --muted:   #6b7280;
+  --border:  #e2ddd6;
+}
+
+/* ── STICKY HEADER ── */
+.lp-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy-dk);
+  border-bottom: 3px solid var(--rust);
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+.lp-logo-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1.12rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  line-height: 1.1;
+}
+.lp-logo-text span { color: var(--rust-lt); }
+.lp-header-cta {
+  background: var(--rust);
+  color: #fff;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 9px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+}
+.lp-header-cta:hover { background: var(--rust-lt); transform: translateY(-1px); }
+
+/* ── TICKER ── */
+.ticker-banner {
+  position: sticky;
+  top: 62px;
+  z-index: 99;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(192,68,31,0.25);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.72);
+  white-space: nowrap;
+}
+.ticker-item strong { color: #fff; }
+.ticker-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
+.live-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse-green 1.8s ease-in-out infinite;
+}
+@keyframes pulse-green {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+  60%      { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+}
+
+/* ── HERO ── */
+.hero {
+  background:
+    linear-gradient(160deg, rgba(15,29,48,0.92) 0%, rgba(26,45,74,0.88) 55%, rgba(74,138,181,0.15) 100%),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center/cover no-repeat;
+  padding: 80px 24px 96px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(192,68,31,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(192,68,31,0.18);
+  border: 1px solid rgba(192,68,31,0.45);
+  color: #f08060;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rust-lt);
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.hero-headline .accent { color: var(--rust-lt); }
+
+.hero-sub {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  margin: 0 auto 40px;
+  max-width: 620px;
+}
+
+/* Hero stat pills */
+.hero-stats {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hero-stat-pill {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 10px;
+  padding: 12px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  min-width: 130px;
+}
+.hero-stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: var(--rust-lt);
+  letter-spacing: -0.02em;
+  display: block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-stat-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.62);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Location card */
+.hero-loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 12px 20px;
+  backdrop-filter: blur(10px);
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-loc-pin-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.hero-loc-text { text-align: left; }
+.hero-loc-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 3px;
+}
+.hero-loc-venue {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--rust);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 36px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 6px 28px rgba(192,68,31,0.4);
+}
+.btn-primary:hover { background: var(--rust-lt); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(192,68,31,0.5); }
+.btn-primary:active { transform: translateY(0); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.btn-ghost:hover { color: #fff; }
+
+/* ── SECTIONS ── */
+.section { padding: 72px 24px; }
+.section-alt { background: var(--off); }
+.section-inner { max-width: 1080px; margin: 0 auto; }
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 10px;
+  display: block;
+}
+.section-headline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--navy-dk);
+  margin: 0 0 14px;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 0 44px;
+}
+
+/* ── UTAH FACTS (replaces hero photos) ── */
+.utah-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 0;
+}
+.utah-fact-card {
+  background: var(--navy-dk);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.utah-fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--rust);
+}
+.utah-fact-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--rust-lt);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+}
+.utah-fact-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.utah-fact-body {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+.utah-fact-source {
+  font-size: 0.66rem;
+  color: rgba(255,255,255,0.28);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ── HOW IT WORKS ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.step-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 26px;
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.step-card:hover {
+  box-shadow: 0 8px 32px rgba(26,45,74,0.1);
+  border-color: var(--navy);
+  transform: translateY(-3px);
+}
+.step-icon {
+  width: 48px; height: 48px;
+  background: rgba(192,68,31,0.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+.step-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--rust);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-label::before {
+  content: '';
+  width: 20px; height: 2px;
+  background: var(--rust);
+  border-radius: 1px;
+}
+.step-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--navy-dk);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.step-body { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+.step-cta-wrap {
+  display: flex; justify-content: center;
+  margin-top: 40px;
+}
+
+/* ── COMPARISON (problem/solution) ── */
+.compare-section {
+  background: var(--navy-dk);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.compare-section::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(192,68,31,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.compare-inner { max-width: 1080px; margin: 0 auto; }
+.compare-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.compare-col-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.compare-col-dot {
+  width: 28px; height: 2px;
+  border-radius: 2px;
+}
+.compare-col-dot--bad  { background: rgba(239,68,68,0.7); }
+.compare-col-dot--good { background: rgba(34,197,94,0.7); }
+.compare-col-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.compare-col-label--bad  { color: rgba(239,100,100,0.85); }
+.compare-col-label--good { color: rgba(74,222,128,0.85); }
+.compare-col-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.compare-rows { display: flex; flex-direction: column; gap: 10px; }
+.compare-row {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 20px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.compare-row--bad {
+  border-left: 2px solid rgba(239,68,68,0.35);
+  background: rgba(255,255,255,0.025);
+}
+.compare-row--bad:hover { background: rgba(239,68,68,0.06); border-left-color: rgba(239,68,68,0.8); }
+.compare-row--good {
+  border-left: 2px solid rgba(34,197,94,0.35);
+  background: rgba(255,255,255,0.025);
+}
+.compare-row--good:hover { background: rgba(34,197,94,0.06); border-left-color: rgba(34,197,94,0.8); }
+.compare-row-icon {
+  width: 38px; height: 38px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.compare-row-icon--bad  { background: rgba(239,68,68,0.2); }
+.compare-row-icon--good { background: rgba(34,197,94,0.15); }
+.compare-row-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.compare-row-body {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+  margin: 0;
+}
+.compare-callout {
+  margin-top: 36px;
+  padding: 22px 26px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-left: 3px solid rgba(255,255,255,0.5);
+  border-radius: 14px;
+}
+.compare-callout p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 600;
+}
+.compare-callout strong { color: #fff; }
+
+/* ── STATS ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.stat-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.stat-card:hover { box-shadow: 0 6px 28px rgba(26,45,74,0.09); transform: translateY(-2px); }
+.stat-card::before {
+  content: '';
+  display: block;
+  width: 40px; height: 3px;
+  background: var(--rust);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+.stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--rust);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  line-height: 1;
+  display: block;
+}
+.stat-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy-dk);
+  margin-bottom: 8px;
+}
+.stat-body { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+.stat-source { font-size: 0.68rem; color: #bbb; margin-top: 10px; font-style: italic; }
+
+/* ── PRICING ── */
+.pricing-section {
+  background: linear-gradient(155deg, var(--navy-dk) 0%, var(--navy) 100%);
+  padding: 72px 24px;
+}
+.pricing-inner { max-width: 960px; margin: 0 auto; }
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.pricing-left .eyebrow { color: rgba(240,128,96,0.9); }
+.pricing-left .section-headline { color: #fff; }
+.pricing-left .section-sub { color: rgba(255,255,255,0.65); margin-bottom: 0; }
+.price-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+}
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.price-old {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #bbb;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.price-main {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--navy-dk);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.price-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 22px; }
+.price-spots {
+  background: rgba(192,68,31,0.08);
+  border: 1px solid rgba(192,68,31,0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rust-dk);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.price-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+.price-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #444;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.45;
+}
+.price-includes li:last-child { border-bottom: none; }
+.check-icon { color: var(--rust); flex-shrink: 0; margin-top: 2px; font-size: 0.9rem; }
+.price-card .btn-primary { width: 100%; justify-content: center; }
+.price-note {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.73rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── TRUST ── */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.trust-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.trust-card:hover { box-shadow: 0 6px 24px rgba(26,45,74,0.09); transform: translateY(-2px); }
+.trust-icon {
+  width: 42px; height: 42px;
+  background: rgba(74,138,181,0.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.trust-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy-dk);
+  margin-bottom: 6px;
+}
+.trust-body { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+/* ── FAQ ── */
+.faq-list { max-width: 700px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-dk);
+  transition: color 0.15s;
+}
+.faq-question:hover { color: var(--rust); }
+.faq-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s, transform 0.2s;
+  color: var(--navy);
+  font-size: 0.75rem;
+}
+.faq-question.open .faq-icon {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: #fff;
+  transform: rotate(45deg);
+}
+.faq-answer {
+  display: none;
+  padding: 0 0 20px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.faq-answer p { margin: 0 0 10px; }
+.faq-answer p:last-child { margin: 0; }
+.faq-answer ul { margin: 0 0 10px; padding-left: 18px; }
+.faq-answer li { margin-bottom: 4px; }
+.faq-answer.open { display: block; }
+
+/* ── FINAL CTA ── */
+.final-cta {
+  background: linear-gradient(155deg, var(--navy-dk) 0%, var(--navy) 100%);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(192,68,31,0.16) 0%, transparent 60%);
+  pointer-events: none;
+}
+.final-cta-inner { max-width: 580px; margin: 0 auto; position: relative; z-index: 1; }
+.final-cta .eyebrow { text-align: center; color: rgba(240,128,96,0.9); }
+.final-cta h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 14px;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.final-cta p { color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.65; margin: 0 0 32px; }
+
+/* ── FOOTER ── */
+.lp-footer {
+  background: var(--navy-dk);
+  border-top: 3px solid var(--rust);
+  padding: 30px 24px;
+}
+.lp-footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.lp-footer-logo-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.lp-footer-logo-text span { color: var(--rust-lt); }
+.lp-footer-info { color: rgba(255,255,255,0.45); font-size: 0.78rem; line-height: 1.6; }
+.lp-footer-info a { color: rgba(240,128,96,0.8); text-decoration: none; }
+.lp-footer-info a:hover { color: var(--rust-lt); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .lp-header { padding: 0 16px; }
+  .lp-header-cta { font-size: 0.78rem; padding: 8px 14px; }
+  .ticker-banner { gap: 14px; padding: 0 14px; }
+  .ticker-item { font-size: 0.68rem; }
+  .ticker-sep { display: none; }
+
+  .hero { padding: 56px 16px 68px; }
+  .hero-headline { font-size: 2.1rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-stats { gap: 10px; }
+  .hero-stat-pill { min-width: 110px; padding: 10px 14px; }
+  .hero-stat-num { font-size: 1.35rem; }
+  .hero-stat-label { font-size: 0.66rem; }
+  .hero-loc { gap: 10px; padding: 10px 14px; }
+
+  .section { padding: 48px 16px; }
+  .section-headline { font-size: 1.65rem; }
+  .section-sub { font-size: 0.9rem; }
+
+  .utah-facts-grid { grid-template-columns: 1fr; gap: 12px; }
+  .utah-fact-num { font-size: 2rem; }
+
+  .steps-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .steps-grid::-webkit-scrollbar { display: none; }
+  .step-card { flex: 0 0 80vw; max-width: 300px; scroll-snap-align: start; padding: 22px 18px; }
+
+  .compare-cols { grid-template-columns: 1fr; gap: 36px; }
+  .compare-section { padding: 56px 16px; }
+
+  .stats-grid { grid-template-columns: 1fr; gap: 14px; }
+  .stat-num { font-size: 1.8rem; }
+
+  .pricing-layout { grid-template-columns: 1fr; gap: 30px; }
+  .price-card { padding: 24px 18px; }
+  .price-main { font-size: 2.6rem; }
+
+  .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .trust-card { padding: 16px 14px; }
+  .trust-title { font-size: 0.82rem; }
+  .trust-body { font-size: 0.75rem; }
+
+  .final-cta { padding: 56px 16px; }
+  .btn-primary { font-size: 0.95rem; padding: 14px 28px; }
+
+  .lp-footer-inner { flex-direction: column; text-align: center; align-items: center; }
+  .lp-footer-info { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-headline { font-size: 1.85rem; }
+  .hero-stats { flex-direction: row; }
+  .hero-stat-pill { min-width: 0; flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="lp-header">
+  <a href="/" class="lp-logo-text">Utah<span> Auto Fair</span></a>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span id="cd-header" style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.5);white-space:nowrap;"></span>
+    <a href="#register" class="lp-header-cta">Register to Sell</a>
+  </div>
+</header>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker-banner">
+  <div class="ticker-item">
+    <span class="live-dot"></span>
+    <span>Founding seller spots — <strong>limited availability</strong></span>
+  </div>
+  <div class="ticker-sep"></div>
+  <div class="ticker-item">
+    <span class="live-dot"></span>
+    <span>Utah's first private-party car fair — <strong>coming 2026</strong></span>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Utah's First Private-Party Auto Fair · 2026
+    </div>
+
+    <h1 class="hero-headline">
+      Show your car to hundreds of<br/>
+      Utah buyers — and <span class="accent">sell it in one weekend.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Drop off your car, let the buyers come to you, and walk away with <strong>full private-party value</strong>. No dealer lowballs. No online listing headaches. No commissions.
+    </p>
+
+    <!-- Utah market facts in place of seller photos -->
+    <div class="hero-stats">
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">$3,200</span>
+        <span class="hero-stat-label">avg. more than<br/>a dealer trade-in</span>
+      </div>
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">500K+</span>
+        <span class="hero-stat-label">used cars change<br/>hands in Utah yearly</span>
+      </div>
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">$99</span>
+        <span class="hero-stat-label">flat fee —<br/>keep every dollar</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-group">
+      <a href="#register" class="btn-primary">
+        Register to Sell
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how" class="btn-ghost">
+        See how it works
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-loc">
+      <span class="hero-loc-pin-icon">📍</span>
+      <div class="hero-loc-text">
+        <div class="hero-loc-meta">Date & Location TBA · 2026 · 9 AM – 6 PM</div>
+        <div class="hero-loc-venue">Salt Lake City / Utah County Area</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY IT WORKS FOR SELLERS ══ -->
+<section class="section" style="background:var(--navy-dk); padding: 64px 24px;">
+  <div class="section-inner">
+    <span class="eyebrow" style="color:rgba(240,128,96,0.9); text-align:center; display:block; margin-bottom:10px;">Why It Works</span>
+    <h2 class="section-headline" style="color:#fff; text-align:center; margin-bottom:12px;">Everything about this format is designed to get you more money, faster.</h2>
+    <p style="color:rgba(255,255,255,0.55); text-align:center; font-size:0.95rem; line-height:1.7; max-width:560px; margin: 0 auto 40px;">Here's what's different about selling at Utah Auto Fair vs. every other option.</p>
+    <div class="utah-facts-grid reveal">
+      <div class="utah-fact-card">
+        <span class="utah-fact-num">1 day</span>
+        <div class="utah-fact-title">Not weeks of waiting</div>
+        <div class="utah-fact-body">The average private listing on Facebook or KSL sits for 3–6 weeks. At Utah Auto Fair, hundreds of buyers see your car in a single weekend — creating urgency you can't manufacture online.</div>
+      </div>
+      <div class="utah-fact-card">
+        <span class="utah-fact-num">Competition</span>
+        <div class="utah-fact-title">works for you, not against you</div>
+        <div class="utah-fact-body">When multiple buyers see your car the same day, they know others are interested too. That competition pushes your price up — the opposite of negotiating one-on-one with a single lowballer.</div>
+      </div>
+      <div class="utah-fact-card">
+        <span class="utah-fact-num">Zero</span>
+        <div class="utah-fact-title">strangers at your front door</div>
+        <div class="utah-fact-body">Every showing happens in a secure public lot with staff present. You never have to give out your home address, meet a stranger alone, or worry about who's walking up your driveway.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section section-alt" id="how">
+  <div class="section-inner">
+    <span class="eyebrow">The Process</span>
+    <h2 class="section-headline">Three steps. One weekend. Done.</h2>
+    <p class="section-sub">Register online, drop off your car event morning, and go enjoy your Saturday. That's it.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-icon">📋</div>
+        <div class="step-label">Step 01</div>
+        <div class="step-title">Submit your pre-registration</div>
+        <p class="step-body">Complete our short registration form and we'll review your vehicle. Once approved, pay the $99 founding rate to lock in your spot. We'll send everything you need for event day.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-icon">🚗</div>
+        <div class="step-label">Step 02</div>
+        <div class="step-title">Drop off your car — then leave</div>
+        <p class="step-body">Pull in on Saturday morning, hand our staff your keys, and go have brunch. Our team manages every buyer viewing, accompanying them for every open. Your car stays locked at all other times.</p>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-icon">📱</div>
+        <div class="step-label">Step 03</div>
+        <div class="step-title">Take calls. Set your price. Keep every dollar.</div>
+        <p class="step-body">Hundreds of local buyers walk the lot and see your for-sale sign with your phone number. You take the calls. You negotiate. No commission, no middleman — just your $99 spot fee.</p>
+      </div>
+    </div>
+    <div class="step-cta-wrap reveal">
+      <a href="#register" class="btn-primary">
+        Register to Sell
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE MATH ══ -->
+<section class="section">
+  <div class="section-inner">
+    <span class="eyebrow">The Numbers</span>
+    <h2 class="section-headline">The math is simple — private beats dealer every time.</h2>
+    <p class="section-sub" style="max-width:720px;">Dealers buy at wholesale and sell at retail. The difference is your money. Utah Auto Fair puts you on the right side of that gap.</p>
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <span class="stat-num">$2,000–$4,000</span>
+        <div class="stat-title">More than a dealer trade-in</div>
+        <div class="stat-body">On a typical used car, dealers offer you wholesale. Private buyers pay retail. That gap is real money that goes to you, not the dealership's margin.</div>
+        <div class="stat-source">Based on KBB private-party vs. trade-in average gap, 2024 national data.</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <span class="stat-num">Hundreds</span>
+        <div class="stat-title">of motivated buyers on one lot</div>
+        <div class="stat-body">No lowballers. No no-shows. No scam texts. Every person who walks our lot came specifically to buy a car. They're self-qualified by the simple act of showing up.</div>
+        <div class="stat-source">Events like ours across the country regularly draw 200–500+ buyers per weekend.</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <span class="stat-num">$0</span>
+        <div class="stat-title">commission — ever</div>
+        <div class="stat-body">Beyond your $99 spot, Utah Auto Fair takes nothing. You set the price. You close the deal. Every dollar of the sale is yours. No surprises.</div>
+        <div class="stat-source">Dealers and consignment services typically take 5–15% of your sale price.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROBLEM / SOLUTION ══ -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="compare-cols">
+
+      <!-- Problems -->
+      <div>
+        <div class="compare-col-header">
+          <div class="compare-col-dot compare-col-dot--bad"></div>
+          <span class="compare-col-label compare-col-label--bad">The Problem</span>
+        </div>
+        <h2 class="compare-col-title">Selling your car shouldn't take months of headaches.</h2>
+        <div class="compare-rows">
+          <div class="compare-row compare-row--bad">
+            <div class="compare-row-icon compare-row-icon--bad">❌</div>
+            <div>
+              <div class="compare-row-title">Endless Online Listings</div>
+              <p class="compare-row-body">Post, edit, repost, wait. Weeks of back-and-forth messages with no guarantee it ever sells — and you deal with every weirdo on the internet.</p>
+            </div>
+          </div>
+          <div class="compare-row compare-row--bad">
+            <div class="compare-row-icon compare-row-icon--bad">❌</div>
+            <div>
+              <div class="compare-row-title">Sketchy Meetups</div>
+              <p class="compare-row-body">Strangers showing up at your home, lowball offers after they're already there, and last-minute cancellations. Not safe. Not fun.</p>
+            </div>
+          </div>
+          <div class="compare-row compare-row--bad">
+            <div class="compare-row-icon compare-row-icon--bad">❌</div>
+            <div>
+              <div class="compare-row-title">Dealer Trade-In Lowballs</div>
+              <p class="compare-row-body">Nitpicky inspections, a take-it-or-leave-it offer $3,000 under market, and zero room to negotiate. You lose. They profit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <div class="compare-col-header">
+          <div class="compare-col-dot compare-col-dot--good"></div>
+          <span class="compare-col-label compare-col-label--good">The Utah Auto Fair Way</span>
+        </div>
+        <h2 class="compare-col-title">We made it simple. One weekend. Full price.</h2>
+        <div class="compare-rows">
+          <div class="compare-row compare-row--good">
+            <div class="compare-row-icon compare-row-icon--good">✅</div>
+            <div>
+              <div class="compare-row-title">One Lot, Hundreds of Serious Buyers</div>
+              <p class="compare-row-body">Every buyer showed up specifically to buy a car today. In-person, motivated, and ready to pay fair market value.</p>
+            </div>
+          </div>
+          <div class="compare-row compare-row--good">
+            <div class="compare-row-icon compare-row-icon--good">✅</div>
+            <div>
+              <div class="compare-row-title">Competing Offers Drive Your Price Up</div>
+              <p class="compare-row-body">Multiple buyers see your car the same day. Competition works in your favor — not against you like it does at a dealership.</p>
+            </div>
+          </div>
+          <div class="compare-row compare-row--good">
+            <div class="compare-row-icon compare-row-icon--good">✅</div>
+            <div>
+              <div class="compare-row-title">Drop It Off — Enjoy Your Weekend</div>
+              <p class="compare-row-body">Hand us your keys Saturday morning, go enjoy your weekend, and take calls from buyers. Our staff handles every showing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="compare-callout reveal" style="max-width:860px; margin: 36px auto 0;">
+      <p>Private-party car fairs have been working in cities across the country for decades. Sellers consistently walk away with <strong>thousands more than any dealer would have paid.</strong> Now it's Utah's turn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section class="pricing-section" id="register">
+  <div class="pricing-inner">
+    <div class="pricing-layout">
+      <div class="pricing-left">
+        <span class="eyebrow">Reserve Your Spot</span>
+        <h2 class="section-headline">Save time.<br>Skip the hassle.<br>Get more for your car.</h2>
+        <p class="section-sub">Selling your used car the traditional way is a headache — weeks of effort for less money. Utah Auto Fair gets you more, with less work, in one weekend.</p>
+        <div style="margin-top: 28px; padding: 20px; background: rgba(192,68,31,0.12); border: 1px solid rgba(192,68,31,0.3); border-radius: 12px;">
+          <p style="font-family:'Inter',sans-serif; font-size:0.88rem; font-weight:700; color:rgba(255,255,255,0.9); margin:0 0 6px; line-height:1.4;">🏅 Founding Seller Pricing</p>
+          <p style="font-size:0.82rem; color:rgba(255,255,255,0.6); margin:0; line-height:1.6;">Lock in $99 now. This rate is for our earliest sellers only — price increases as spots fill.</p>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-row">
+          <span class="price-old">$125</span>
+          <span class="price-main">$99</span>
+        </div>
+        <div class="price-label">Flat fee — your reserved spot for the full event weekend.</div>
+        <div class="price-spots">
+          ⚠️ &nbsp;Limited founding spots available — filling fast
+        </div>
+        <ul class="price-includes">
+          <li>
+            <span class="check-icon">✓</span>
+            Reserved display spot for your vehicle, visible to hundreds of ready buyers
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Custom for-sale window sign with your price, details, and contact info
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Buyer marketing — social media, email, and paid ads driving attendance
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Vehicle listed in our online pre-event gallery
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            On-site staff to assist with buyer showings — your car is never left unattended
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Utah title transfer paperwork and instructions provided on-site
+          </li>
+        </ul>
+        <div class="price-note" style="margin-bottom:14px; font-weight:700; color:#444;">Avg. seller nets $3,200 more than a dealer trade-in — based on KBB data.</div>
+        <a href="mailto:info@utahautofair.com?subject=Seller%20Registration%20Interest" class="btn-primary">
+          Register to Sell
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="price-note" style="margin-top:12px;">Questions? Email <a href="mailto:info@utahautofair.com" style="color:var(--rust);">info@utahautofair.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST & SAFETY ══ -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <span class="eyebrow">Trust &amp; Safety</span>
+    <h2 class="section-headline">Safe. Organized. Professional.</h2>
+    <p class="section-sub" style="max-width:720px;">Utah Auto Fair is a structured, public event — not a random parking lot meetup. Your car, your safety, and your peace of mind are our priority.</p>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon">🏟️</div>
+        <div class="trust-title">Large public venue</div>
+        <div class="trust-body">A large, established public venue with clear access, ample parking, and a professional atmosphere buyers and sellers trust.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-1">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-title">Security on-site</div>
+        <div class="trust-body">Staff, security personnel, and on-site support present throughout the event. Your vehicle is never left unattended or unlocked.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-2">
+        <div class="trust-icon">🔑</div>
+        <div class="trust-title">Staff-supervised viewings</div>
+        <div class="trust-body">A staff member accompanies every buyer who views a vehicle. Cars stay locked at all other times. Your keys never leave our team.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-3">
+        <div class="trust-icon">📄</div>
+        <div class="trust-title">Title transfer support</div>
+        <div class="trust-body">Utah DMV paperwork and step-by-step title transfer instructions provided on-site. No guesswork after you close the deal.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section">
+  <div class="section-inner">
+    <div style="text-align:center;">
+      <span class="eyebrow" style="display:block; text-align:center;">Common Questions</span>
+      <h2 class="section-headline" style="text-align:center;">Seller FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How does it work?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Register online, drop off your car on event morning, and go enjoy your day.</p>
+          <p>We professionally display your car with a custom window sign showing your price, key details, and contact info. Our staff safely assists buyers with viewings throughout the day.</p>
+          <p>Instead of dealing with one-off messages and no-shows, your car is seen by hundreds of serious buyers in one place — creating real demand and competition.</p>
+          <p>You stay in control. Set your price, talk directly with buyers, and negotiate on your terms. No middlemen. No commissions.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if my car doesn't sell?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Pick up your car at the end of the event — no pressure.</p>
+          <p>Even if it doesn't sell on the day, most sellers leave with multiple interested contacts and often close deals in the days following the event. You'll also be first to know about upcoming events, with a discounted rate as a returning seller.</p>
+          <p>The $99 registration fee is non-refundable once the event date is set.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Does Utah Auto Fair take a cut of my sale?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Never. You handle everything. We don't touch the deal.</p>
+          <p>Utah Auto Fair simply brings the buyers to you. You set the price, negotiate directly, and complete the sale on your own terms. No commissions. No hidden fees. 100% of the sale price is yours.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you accept salvage or rebuilt title vehicles?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No — clean title vehicles only.</p>
+          <p>Every car is VIN-checked before approval to maintain a high-quality marketplace that buyers can trust. Salvage or rebuilt title vehicles found on-site will be removed without a refund.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What do I need to bring on event day?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <ul>
+            <li>Your vehicle (clean and ready to show)</li>
+            <li>Car keys</li>
+            <li>Valid driver's license</li>
+            <li>Your registration confirmation email</li>
+          </ul>
+          <p>We handle everything else — signage, display materials, buyer management, and paperwork assistance.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          When and where is the event?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We're targeting a 2026 event date in the Salt Lake City / Utah County area. Register your interest now to be first on the list and lock in founding seller pricing before we announce the date publicly.</p>
+          <p>Email us at <a href="mailto:info@utahautofair.com" style="color:var(--rust); font-weight:600;">info@utahautofair.com</a> with any questions.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:36px;">
+      <p style="font-size:0.9rem; color:var(--muted); margin: 0 0 8px;">Have more questions?</p>
+      <a href="mailto:info@utahautofair.com" style="font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:700; color:var(--navy-dk); text-decoration:none; display:inline-flex; align-items:center; gap:6px; border-bottom:2px solid var(--rust); padding-bottom:2px;">
+        Email us anytime
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <span class="eyebrow">Founding Seller Spots — Limited</span>
+    <h2>The smarter way to sell your car is here.</h2>
+    <p>One weekend. $99 to list. No commissions. The average seller nets $3,200 more than any dealer would have offered. Utah's first private-party auto fair is coming — secure your spot now.</p>
+    <a href="mailto:info@utahautofair.com?subject=Seller%20Registration%20Interest" class="btn-primary">
+      Register to Sell
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+    <a href="/" class="lp-footer-logo-text">Utah<span> Auto Fair</span></a>
+    <div class="lp-footer-info">
+      Date &amp; Location TBA · Salt Lake City / Utah County Area, Utah<br/>
+      <a href="mailto:info@utahautofair.com">info@utahautofair.com</a>
+    </div>
+    <div class="lp-footer-info" style="text-align:right;">
+      © 2026 Utah Auto Fair. All rights reserved.
+    </div>
+  </div>
+  <div style="text-align:center; padding:12px 24px 18px;">
+    <p style="font-size:0.65rem; color:rgba(255,255,255,0.22); max-width:680px; margin:0 auto; line-height:1.6;">Utah Auto Fair is an independently organized private event. Use of any venue location does not constitute or imply endorsement or approval by the venue or its affiliates.</p>
+  </div>
+</footer>
+
+<script>
+/* ── FAQ ── */
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+/* ── SCROLL REVEAL ── */
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { obs.observe(el); });
+})();
+
+/* ── COUNTDOWN in header (to event — placeholder date Jul 11 2026) ── */
+(function () {
+  var target = new Date('2026-07-11T09:00:00');
+  var el = document.getElementById('cd-header');
+  if (!el) return;
+  function tick() {
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0) { el.textContent = 'Event day!'; return; }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    el.textContent = d + 'd ' + h + 'h ' + m + 'm away';
+  }
+  tick();
+  setInterval(tick, 30000);
+})();
+</script>
+</body>
+</html>
